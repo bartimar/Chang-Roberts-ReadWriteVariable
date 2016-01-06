@@ -16,6 +16,7 @@ def client(dPort):
  while True:
    s = raw_input('Choose one\n1 - print variable\n2 - set variable\n3 - logout\nyour choice: ');
    if s=="3":
+      clientsocket.send(s)
       break
    if s == "2":
       var =  raw_input('Insert new value: ')
@@ -53,10 +54,15 @@ id=str(address[0])+':'+str(address[1])
 while True:
     buf = connection.recv(64)
     if len(buf) > 0:
-        print 'RECV:'+ id + '> ' + buf
         r = buf[2:]
         if buf[0] == '2':
           print 'Changing variable '+ sh_var + '->' + r
           sh_var = r;
-        connection.send('shared variable: ' + sh_var)
+        if buf == '3': 
+	  print 'RECV:' + id + '> logout!'
+	  break
+        print 'RECV:'+ id + '> ' + buf
+	connection.send('shared variable: ' + sh_var)
         #break
+
+serversocket.close()
