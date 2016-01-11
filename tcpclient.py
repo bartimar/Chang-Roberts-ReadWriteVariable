@@ -24,32 +24,32 @@ def addNode(node):
    port = node[1]
    node = node[2:]
    mnode = ip + ' ' + port
-   print 'adding node ' + mnode
+   info('adding node ' + mnode)
    if mnode not in nodes:
-     print myIP+':'+str(myPort)+' '+ip+':'+port
+     info(myIP+':'+str(myPort)+' '+ip+':'+port)
      if myIP==ip and str(myPort)==port: continue 
      nodes.append(mnode)
      addConn(mnode)
      pongs = [0]*len(nodes)
- print 'currently have ' + str(len(nodes)) + ' nodes'
+ info('currently have ' + str(len(nodes)) + ' nodes')
  #TODO sort
  
 def deleteNode(node):
- print 'deleting node ' + node
+ info('deleting node ' + node)
  id = nodes.index(node)
  connections[id].close()
  del connections[id]
  nodes.remove(node)
  
 def deleteConn(toDel):
- print 'deleting conn ' + toDel
+ info('deleting conn ' + toDel)
  for conn in connections:
   host, port = conn.getsockname()
   bhost, bport = toDel.split(' ')
   if host == bhost and port ==bport :
     connections.remove(node)
     conn.close()
-    print 'deleted'
+    info('deleted')
     return 
 
 def addConn(node):
@@ -59,26 +59,26 @@ def addConn(node):
   ip = node[0]
   port = node[1]
   node = node[2:]
-  print 'adding conn ' + ip + ' ' + port
+  info('adding conn ' + ip + ' ' + port)
   clientsocket = socket.socket(
     socket.AF_INET, socket.SOCK_STREAM)
   clientsocket.connect((ip,int(port)))
   if clientsocket not in connections:  connections.append(clientsocket)
-  print 'currently have ' + str(len(connections)) + ' connections'
+  info('currently have ' + str(len(connections)) + ' connections')
  #TODO sort
 
 def printNodes():
- print '------------------------------'
- print myIP, myPort, '(me)'
+ info('------------------------------')
+ info(myIP + ':' + str(myPort) + ' (me)')
  for node in nodes:
-  print str(node)
- print 'total=' + str(len(nodes)+1)
- print '------------------------------'
+  info(str(node))
+ info('total=' + str(len(nodes)+1))
+ info('------------------------------')
 
 def broadcast(msg):
  for i,conn in enumerate(connections):
    conn.send(msg)
-   print "Send me->" + str(nodes[i]) + " (" + msg + ")"
+   info("Send me->" + str(nodes[i]) + " (" + msg + ")")
 
 def sendNodes(remote):
  if remote.count(' ')>2: return
@@ -95,19 +95,26 @@ def sendNodes(remote):
 #  connections[0].send(msg)
 #  print "Send me->" + str(connections[0].getsockname()) + " (" + msg + ")"
 
+def info(msg):
+ global log
+ print msg
+ log.write(msg + '\n')
+ log.flush()
+
 def client(destIP, dport):
  global hellomsg
  #time.sleep(1)
  i=0;
  global sh_var
  global end
- print "dport=" + str(dport)
+ info("dport=" + str(dport))
  clientsocket = socket.socket(
     socket.AF_INET, socket.SOCK_STREAM)
  if(dport != -1):
-  addNode(destIP + ' ' + str(dport))
-  broadcast(hellomsg)
-## LOGOUT NECHCI POSILAT VSEM!!!
+   addNode(destIP + ' ' + str(dport))
+   broadcast(hellomsg)
+ else: 
+   info("First node started on port " + str(myPort))
 
  while end!=True:
    #print 'c'
@@ -115,7 +122,7 @@ def client(destIP, dport):
    #print 'ca'
    if s=="3": #LOGOUT
       broadcast('BYE '+ hellomsg.split(' ',1)[1])
-      print 'Client: end->True'
+      info('Client: end->True')
       end = True   
       break
    elif s == "2": # SET VAR
@@ -123,29 +130,29 @@ def client(destIP, dport):
       sh_var = var
       broadcast('SET ' + sh_var)
    elif s == "1": # READ VAR
-      print('shared variable: ' + sh_var)
+      info('shared variable: ' + sh_var)
    elif s == "4": # check system
       printNodes()
    else: 
-      print 'wrong command \"'+ s + '\"!'
+      info('wrong command \"'+ s + '\"!')
       continue
  clientsocket.close ()
 
 def printUsage(args):
- print "USAGE: " + args[0] + " portToListen [neighborIP:neighborPort]"
- print "Please use ports >1023."
+ print("USAGE: " + args[0] + " IP:portToListen [neighborIP:neighborPort]")
+ print("Please use ports >1023.")
  exit()
 
 def handlePong(node):
  id=nodes.index(node)
  #print 'id=' + str(id)
  pongs[id]+=1
- print 'pongs='+ str(pongs)
+ info('pongs='+ str(pongs))
  m=max(pongs)
  for i,pong in enumerate(pongs):
   if(pong<m-2):
    node = nodes[i]
-   print 'ALERT! node=' + node + ' is dead'
+   info('ALERT! node=' + node + ' is dead')
    deleteNode(node)
    del pongs[i]
 
@@ -163,12 +170,12 @@ def server(sport):
  cnt = 0
  while end != True:
   readable, writable, errored = select.select(read_list, [], [],timeout)
-  #print 'readable=' + str(len(readable)) + ' writable=' + str(len(writable)) + ' errored=' + str(len(errored))
+  #info('readable=' + str(len(readable)) + ' writable=' + str(len(writable)) + ' errored=' + str(len(errored)))
   if(len(readable)>0): cnt=0
   cnt+=1
-  #print 'increm cnt='+str(cnt) + ', len=' + str(len(nodes))
+  #info('increm cnt='+str(cnt) + ', len=' + str(len(nodes)))
   #if len(nodes) == 1 and cnt>6:
-  # print 'ALERT! node=' + nodes[0] + ' is dead'
+  # info('ALERT! node=' + nodes[0] + ' is dead')
   # deleteNode(nodes[0])
   # del pongs[0]
  
@@ -176,7 +183,7 @@ def server(sport):
     if s is serversocket: 
      connection, address = serversocket.accept()
      read_list.append(connection)
-     print "Connection from ", str(connection.getsockname())  
+     info("Connection from " + str(connection.getsockname())  )
     else:
      id=str(s.getsockname())
      #print 's'
@@ -187,18 +194,18 @@ def server(sport):
 	 cmd = parse[0]
 	 if cmd == 'SET':
 	   #if(len(parse)<=2):
-		#print "Wrong syntax.\nEnter value!"
+		#info("Wrong syntax.\nEnter value!")
 		#continue
 	   arg = parse[1]
-	   print 'Changing variable '+ sh_var + '->' + arg
+	   info('Changing variable '+ sh_var + '->' + arg)
 	   sh_var = arg;
 	 if cmd == '3': 
-	   print 'RECV:' + id + '> logout!'
+	   info('RECV:' + id + '> logout!')
 	   end = True
-	   print 'Server: end->True'
+	   info('Server: end->True')
 	   break
 	 if cmd == 'HELLO':
-	   #print 'server received hello via ' +  str(connection.getsockname())
+	   #info('server received hello via ' +  str(connection.getsockname()))
 	   #clientsocket.connect(s)
 	   if buf == hellomsg:
 	    continue
@@ -206,16 +213,16 @@ def server(sport):
 	   addNode(parse[1])
 	   sendNodes(parse[1])
 	 if cmd == 'BYE':
-	   print 'received BYE from ' + parse[1]
+	   info('received BYE from ' + parse[1])
 	   deleteConn(parse[1])
 	   deleteNode(parse[1])
 	   read_list.remove(connection)
 	   continue
 	 if cmd == 'PONG':
-	   #print 'received pong from ' + parse[1]
+	   #info('received pong from ' + parse[1])
 	   handlePong(parse[1])
 	   cnt=0
-	 print 'RECV:'+ id + '> ' + buf
+	 info('RECV:'+ id + '> ' + buf)
 	 #print 'ass'
 	 connection.send('shared variable: ' + sh_var)
 	 #break
@@ -245,8 +252,16 @@ def ping():
 argc = len(sys.argv)
 if not (2 <= argc <= 3 ):
  printUsage(sys.argv)
+try:
+ me = sys.argv[1].split(':')
+ myIP=me[0]
+ sport = int(me[1])
 
-sport = int(sys.argv[1])
+except:
+ print("Error: First argument should be IP:port (including the semicolon)")
+ printUsage(sys.argv)
+ sys.exit()
+
 if(argc > 2):
  neighbor = sys.argv[2].split(':') 
  if(len(neighbor)<2):
@@ -260,10 +275,12 @@ else:
   destIP = "-1"
 
 #TODO
-hellomsg='HELLO '+ '127.0.0.1 ' + str(sport)
-myIP = '127.0.0.1'
+hellomsg='HELLO '+ myIP + str(sport)
 myPort = sport
 
+filename = 'dsv-' + myIP + '-' +str(sport) + '.log'
+global log
+log = open(filename,'w')
 
 # Create two threads as follows
 try:
@@ -272,9 +289,9 @@ try:
  p=threading.Thread( target=ping, args=() )
 
 except (KeyboardInterrupt,SystemExit):
-   print "Error: unable to start thread"
+   info("Error: unable to start thread")
+   log.close()
    sys.exit()
-
 
 s.start()
 time.sleep(1)
