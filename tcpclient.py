@@ -17,6 +17,7 @@ myPort = -1
 pongs = []
 
 def addNode(node):
+ info('adding node:' + node)
  global pongs
  node = node.split(' ')
  while len(node)>0:
@@ -80,14 +81,33 @@ def broadcast(msg):
    conn.send(msg)
    info("Send me->" + str(nodes[i]) + " (" + msg + ")")
 
+def isMe(node):
+ spl = node.split(' ')
+ ip = spl[0]
+ port = spl[1]
+ info('to cmp: '+ip+'=='+myIP+' and '+port+'=='+str(myPort))
+ if(ip == myIP) and (port==str(myPort)):
+  return True
+ return False
+
+def isRemote(a,b):
+ a = a.split(' ')
+ b = b.split(' ')
+ if(a[0]==b[0])and(a[1]==b[1]):
+  return True
+ return False
+
 def sendNodes(remote):
  if remote.count(' ')>2: return
  id = nodes.index(remote)
  conn = connections[id]
- msg = 'HELLO'
+ msg = 'WELCOME'
  for node in nodes:
+  if(isMe(node)): continue
+  #if(isRemote(remote,node)): continue
   #conn.send('HELLO ' + node + ' ')
   msg += ' ' + node
+ info('remote:' + remote + ' msg:' + msg)
  conn.send(msg)  
 
 #def unicast(msg):
@@ -136,6 +156,7 @@ def client(destIP, dport):
    else: 
       info('wrong command \"'+ s + '\"!')
       continue
+ info('closing clientsocket')
  clientsocket.close ()
 
 def printUsage(args):
@@ -162,7 +183,7 @@ def server(sport):
  serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
  serversocket.bind(('localhost', sport))
  serversocket.listen(10) # become a server socket, maximum 5 connections
-
+ serversocket.setblocking(0)
  #connection, address = serversocket.accept()
  #id=str(address[0])+':'+str(address[1])
  read_list = [serversocket]
@@ -180,15 +201,15 @@ def server(sport):
   # del pongs[0]
  
   for s in readable:
-    if s is serversocket: 
+    if s is serversocket:
      connection, address = serversocket.accept()
      read_list.append(connection)
-     info("Connection from " + str(connection.getsockname())  )
+     info("Received new connection")
     else:
      id=str(s.getsockname())
-     #print 's'
+     info('Server is about to receive data')
      buf = connection.recv(64)
-     #print 'as'
+     print 'as'
      if len(buf) > 0:
 	 parse = buf.split(' ',1)
 	 cmd = parse[0]
@@ -207,11 +228,14 @@ def server(sport):
 	 if cmd == 'HELLO':
 	   #info('server received hello via ' +  str(connection.getsockname()))
 	   #clientsocket.connect(s)
-	   if buf == hellomsg:
-	    continue
-	   broadcast(buf)
+	   #if buf == hellomsg:
+	   # continue
+	   broadcast(buf.replace('HELLO','WELCOME'))
 	   addNode(parse[1])
 	   sendNodes(parse[1])
+	 if cmd == 'WELCOME':
+	   info('got welcome msg: ' + buf)
+	   addNode(parse[1])
 	 if cmd == 'BYE':
 	   info('received BYE from ' + parse[1])
 	   deleteConn(parse[1])
@@ -224,9 +248,10 @@ def server(sport):
 	   cnt=0
 	 info('RECV:'+ id + '> ' + buf)
 	 #print 'ass'
-	 connection.send('shared variable: ' + sh_var)
+	 #connection.send('shared variable: ' + sh_var)
 	 #break
   
+ info('Server terminating')
  serversocket.close()
 
 def ping():
@@ -275,7 +300,7 @@ else:
   destIP = "-1"
 
 #TODO
-hellomsg='HELLO '+ myIP + str(sport)
+hellomsg='HELLO '+ myIP + ' ' + str(sport)
 myPort = sport
 
 filename = 'dsv-' + myIP + '-' +str(sport) + '.log'
@@ -296,5 +321,5 @@ except (KeyboardInterrupt,SystemExit):
 s.start()
 time.sleep(1)
 c.start()
-p.start()
+#p.start()
 
