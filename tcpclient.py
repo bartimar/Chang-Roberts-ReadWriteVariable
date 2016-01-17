@@ -28,7 +28,8 @@ def addNode(node):
    info('adding node ' + mnode)
    if mnode not in nodes:
      info(myIP+':'+str(myPort)+' '+ip+':'+port)
-     if myIP==ip and str(myPort)==port: continue 
+     if myIP==ip and myPort==int(port): continue 
+     info('node appended, connection created')
      nodes.append(mnode)
      addConn(mnode)
      pongs = [0]*len(nodes)
@@ -78,7 +79,7 @@ def printNodes():
 
 def broadcast(msg):
  for i,conn in enumerate(connections):
-   conn.send(msg)
+   conn.send(msg +" \n")
    info("Send me->" + str(nodes[i]) + " (" + msg + ")")
 
 def isMe(node):
@@ -108,8 +109,10 @@ def sendNodes(remote):
   #conn.send('HELLO ' + node + ' ')
   msg += ' ' + node
  info('remote:' + remote + ' msg:' + msg)
- conn.send(msg)  
-
+ conn.send(msg + " \n") 
+ if sh_var != 'default': 
+  conn.send('SET ' + sh_var +" \n")
+  info('send: SET ' + sh_var) 
 #def unicast(msg):
 # if(len(connections)>0): 
 #  connections[0].send(msg)
@@ -233,6 +236,7 @@ def server(sport):
 	   broadcast(buf.replace('HELLO','WELCOME'))
 	   addNode(parse[1])
 	   sendNodes(parse[1])
+	   #TODO: set var to remote initial value
 	 if cmd == 'WELCOME':
 	   info('got welcome msg: ' + buf)
 	   addNode(parse[1])
