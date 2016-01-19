@@ -236,7 +236,7 @@ def server(sport):
  global sh_var
  global leader
  serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
- serversocket.bind(('localhost', sport))
+ serversocket.bind((myIP, sport))
  serversocket.listen(10) # become a server socket, maximum 5 connections
  read_list = [serversocket]
  timeout = 1
