@@ -337,7 +337,7 @@ def ping():
 
 def timer():
  global logtime
- while True:
+ while end != True:
   time.sleep(1)
   logtime+=1
 
