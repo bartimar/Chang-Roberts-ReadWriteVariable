@@ -142,6 +142,7 @@ def sendNodes(remote):
  #info('remote:' + remote + ' msg:' + msg)
  conn.send(msg+'\n') 
  #info("Send me->" + str(nodes[id]) + " (" + msg + ")")
+ if len(nodes)>1: sendToLeader('SET ' + sh_var)
  if sh_var != 'default': 
   conn.send('SET ' + sh_var+'\n')
   info('send: SET ' + sh_var) 
@@ -173,9 +174,7 @@ def client(destIP, dport):
    info("First node started on port " + str(myPort))
    leader=getMyID()
  while end!=True:
-   #print 'c'
    s = raw_input('Choose one\n1 - print variable\n2 - set variable\n3 - logout\n4 - check system\nyour choice: ');
-   #print 'ca'
    if s=="3": #LOGOUT
       broadcast('BYE '+ hellomsg.split(' ',1)[1])
       info('Client: end->True')
@@ -192,7 +191,7 @@ def client(destIP, dport):
    else: 
       info('wrong command \"'+ s + '\"!')
       continue
- info('closing clientsocket')
+ info('Client terminating')
  clientsocket.close ()
 
 def printUsage(args):
