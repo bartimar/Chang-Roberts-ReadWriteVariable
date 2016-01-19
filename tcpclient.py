@@ -184,7 +184,7 @@ def client(destIP, dport):
    elif s == "2": # SET VAR
       var =  raw_input('Insert new value: ')
       sh_var = var
-      sendToLeader('SET ' + sh_var)
+      if len(nodes)>1: sendToLeader('SET ' + sh_var)
    elif s == "1": # READ VAR
       info('shared variable: ' + sh_var)
    elif s == "4": # check system
