@@ -19,7 +19,6 @@ leader = -1
 logtime = 0 
 
 def addNode(node):
- #info('adding node:' + node)
  global pongs
  global nodes
  node = node.split(' ')
@@ -37,13 +36,10 @@ def addNode(node):
      pongs = [0]*len(nodes)
  info('currently have ' + str(len(nodes)) + ' nodes')
  nodes = sorted(nodes)
- #TODO sort
  
 def deleteNode(node):
  id = nodes.index(node)
  info('deleting node ' + node+' id='+str(id))
- #connections[id].close()
- #del connections[id]
  nodes.remove(node)
  if id==leader and getMyID()==(id-1)%len(nodes):
   info('leader left, starting new election')
@@ -62,25 +58,22 @@ def deleteConn(toDel):
     return 
 
 def addConn(node):
- #TODO dont add myself
  node = node.split(' ')
  while len(node)>1:
   ip = node[0]
   port = node[1]
   node = node[2:]
   if ip==myIP and int(port)==myPort: continue
-  info('adding conn ' + ip + ' ' + port)
+  #info('adding conn ' + ip + ' ' + port)
   clientsocket = socket.socket(
     socket.AF_INET, socket.SOCK_STREAM)
   clientsocket.connect((ip,int(port)))
   connections.append(clientsocket)
   clientsocket.send('WELCOME ' +myIP+' ' +str(myPort)+'\n')
   info('currently have ' + str(len(connections)) + ' connections')
- #TODO sort
 
 def printNodes():
  info('------------------------------')
- #info(myIP + ':' + str(myPort) + ' (me)')
  for i,node in enumerate(nodes):
   ld=""
   if i==leader: ld=" = leader"
@@ -97,7 +90,7 @@ def sendLeft(msg):
  for conn in connections:
   ip, port = conn.getpeername()
   if ip==left[0] and port==int(left[1]):
-     info('really sending that msg')
+     #info('really sending that msg')
      conn.send(msg+'\n')
 
 def getMyID():
@@ -115,7 +108,7 @@ def sendToLeader(msg):
       conn.send(msg+'\n') 
 
 def broadcast(msg):
- info('len conn='+ str(len(connections)))
+ #info('len conn='+ str(len(connections)))
  for conn in connections:
    conn.send(msg+'\n')
    info("Send me->" + str(conn.getpeername()) + " (" + msg + ")")
@@ -148,7 +141,7 @@ def sendNodes(remote):
   msg += ' ' + node
  #info('remote:' + remote + ' msg:' + msg)
  conn.send(msg+'\n') 
- info("Send me->" + str(nodes[id]) + " (" + msg + ")")
+ #info("Send me->" + str(nodes[id]) + " (" + msg + ")")
  if sh_var != 'default': 
   conn.send('SET ' + sh_var+'\n')
   info('send: SET ' + sh_var) 
@@ -167,7 +160,7 @@ def client(destIP, dport):
  i=0;
  global sh_var
  global end
- info("dport=" + str(dport))
+ #info("dport=" + str(dport))
  addNode(myIP + ' ' +str(myPort))
  clientsocket = socket.socket(
     socket.AF_INET, socket.SOCK_STREAM)
