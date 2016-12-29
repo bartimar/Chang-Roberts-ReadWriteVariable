@@ -1,0 +1,27 @@
+dport=-1
+adding node 127.0.0.1 9021
+node appended, connection created
+currently have 1 nodes
+First node started on port 9021
+Received new connection
+adding node 127.0.0.1 10021
+node appended, connection created
+adding conn 127.0.0.1 10021
+currently have 1 connections
+currently have 2 nodes
+adding node 127.0.0.1 10021
+currently have 2 nodes
+Send me->127.0.0.1 10021 (WELCOME 127.0.0.1 10021)
+len conn=1
+Send me->('127.0.0.1', 10021) (WELCOME 127.0.0.1 10021)
+Sending to left node. My id=1 left=0 (127.0.0.1 10021)
+Sending to left node. My id=1 left=0 (127.0.0.1 10021)
+I'm the new leader.
+Sending to left node. My id=1 left=0 (127.0.0.1 10021)
+I'm the new leader.
+Sending to left node. My id=1 left=0 (127.0.0.1 10021)
+------------------------------
+127.0.0.1 10021
+127.0.0.1 9021(me) = leader
+total=2
+------------------------------

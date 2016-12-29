@@ -1,0 +1,17 @@
+dport=-1
+adding node 127.0.0.1 9039
+node appended, connection created
+currently have 1 nodes
+First node started on port 9039
+Received new connection
+adding node 127.0.0.1 10039
+node appended, connection created
+adding conn 127.0.0.1 10039
+currently have 1 connections
+currently have 2 nodes
+adding node 127.0.0.1 10039
+currently have 2 nodes
+Send me->127.0.0.1 10039 (WELCOME 127.0.0.1 10039)
+len conn=1
+Send me->('127.0.0.1', 10039) (WELCOME 127.0.0.1 10039)
+Voting initiated by node 1

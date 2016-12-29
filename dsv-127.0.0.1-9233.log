@@ -1,0 +1,45 @@
+dport=-1
+First node started on port 9233
+Connection from ('127.0.0.1', 9233)
+adding node:127.0.0.1 10020
+adding node 127.0.0.1 10020
+127.0.0.1:9233 127.0.0.1:10020
+adding conn 127.0.0.1 10020
+currently have 1 connections
+currently have 1 nodes
+to cmp: 127.0.0.1==127.0.0.1 and 10020==9233
+remote:127.0.0.1 10020 msg:WELCOME 127.0.0.1 10020
+RECV:('127.0.0.1', 9233)> HELLO 127.0.0.1 10020
+shared variable: default
+shared variable: default
+Send me->127.0.0.1 10020 (SET 111)
+Changing variable 111->222
+RECV:('127.0.0.1', 9233)> SET 222
+shared variable: 222
+shared variable: 222
+got welcome msg: WELCOME 127.0.0.1 11014
+adding node:127.0.0.1 11014
+adding node 127.0.0.1 11014
+127.0.0.1:9233 127.0.0.1:11014
+adding conn 127.0.0.1 11014
+currently have 2 connections
+currently have 2 nodes
+RECV:('127.0.0.1', 9233)> WELCOME 127.0.0.1 11014
+shared variable: 222
+shared variable: 222
+shared variable: 222
+wrong command "111"!
+Send me->127.0.0.1 10020 (SET 111)
+Send me->127.0.0.1 11014 (SET 111)
+shared variable: 111
+Send me->127.0.0.1 10020 (SET 111)
+Send me->127.0.0.1 11014 (SET 111)
+------------------------------
+127.0.0.1:9233 (me)
+127.0.0.1 10020
+127.0.0.1 11014
+total=3
+------------------------------
+shared variable: 111
+Send me->127.0.0.1 10020 (SET 111)
+Send me->127.0.0.1 11014 (SET 111)

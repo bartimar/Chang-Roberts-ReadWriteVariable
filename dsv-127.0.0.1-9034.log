@@ -1,0 +1,38 @@
+dport=-1
+First node started on port 9034
+Received new connection
+adding node 127.0.0.1 10034
+node appended, connection created
+adding conn 127.0.0.1 10034
+currently have 1 connections
+currently have 1 nodes
+RECV:('127.0.0.1', 9034)> WELCOME 127.0.0.1 10034
+adding node 127.0.0.1 10034
+currently have 1 nodes
+Send me->127.0.0.1 10034 (WELCOME 127.0.0.1 10034)
+Send me->('127.0.0.1', 10034) (WELCOME 127.0.0.1 10034)
+RECV:('127.0.0.1', 9034)> HELLO 127.0.0.1 10034
+------------------------------
+127.0.0.1:9034 (me)
+127.0.0.1 10034
+total=2
+------------------------------
+Received new connection
+adding node 127.0.0.1 11026
+node appended, connection created
+adding conn 127.0.0.1 11026
+currently have 2 connections
+currently have 2 nodes
+RECV:('127.0.0.1', 9034)> WELCOME 127.0.0.1 11026
+adding node 127.0.0.1 11026
+currently have 2 nodes
+Send me->127.0.0.1 11026 (WELCOME 127.0.0.1 10034 127.0.0.1 11026)
+Send me->('127.0.0.1', 10034) (WELCOME 127.0.0.1 11026)
+Send me->('127.0.0.1', 11026) (WELCOME 127.0.0.1 11026)
+RECV:('127.0.0.1', 9034)> HELLO 127.0.0.1 11026
+------------------------------
+127.0.0.1:9034 (me)
+127.0.0.1 10034
+127.0.0.1 11026
+total=3
+------------------------------

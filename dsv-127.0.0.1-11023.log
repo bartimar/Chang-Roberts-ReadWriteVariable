@@ -1,0 +1,39 @@
+dport=9023
+adding node 127.0.0.1 11023
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9023
+node appended, connection created
+adding conn 127.0.0.1 9023
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9023) (HELLO 127.0.0.1 11023)
+Received new connection
+adding node 127.0.0.1 9023
+currently have 2 nodes
+adding node 127.0.0.1 10023
+node appended, connection created
+adding conn 127.0.0.1 10023
+currently have 2 connections
+adding node 127.0.0.1 11023
+currently have 3 nodes
+adding node 127.0.0.1 11023
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 10023
+currently have 3 nodes
+Voting initiated by node 1
+Sending to left node. My id=1 left=0 (127.0.0.1 10023)
+Sending to left node. My id=1 left=0 (127.0.0.1 10023)
+Sending to left node. My id=1 left=0 (127.0.0.1 10023)
+System has a new leader: id=2
+Sending to left node. My id=1 left=0 (127.0.0.1 10023)
+System has a new leader: id=2
+Sending to left node. My id=1 left=0 (127.0.0.1 10023)
+------------------------------
+127.0.0.1 10023
+127.0.0.1 11023(me)
+127.0.0.1 9023 = leader
+total=3
+------------------------------

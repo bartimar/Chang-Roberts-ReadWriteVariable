@@ -1,0 +1,48 @@
+dport=-1
+adding node 127.0.0.1 9033
+node appended, connection created
+currently have 1 nodes
+First node started on port 9033
+Received new connection
+adding node 127.0.0.1 10033
+node appended, connection created
+adding conn 127.0.0.1 10033
+currently have 1 connections
+currently have 2 nodes
+adding node 127.0.0.1 10033
+currently have 2 nodes
+Send me->127.0.0.1 10033 (WELCOME 127.0.0.1 10033)
+len conn=1
+Send me->('127.0.0.1', 10033) (WELCOME 127.0.0.1 10033)
+Voting initiated by node 1
+Sending to left node.ELECTION 1
+Sending to left node.ELECTION 1
+I'm the new leader.
+Sending to left node.ELECTED 1
+I'm the new leader.
+Sending to left node.ELECTED 1
+Received new connection
+adding node 127.0.0.1 11033
+node appended, connection created
+adding conn 127.0.0.1 11033
+currently have 2 connections
+currently have 3 nodes
+adding node 127.0.0.1 11033
+currently have 3 nodes
+Send me->127.0.0.1 11033 (WELCOME 127.0.0.1 10033 127.0.0.1 11033)
+len conn=2
+Send me->('127.0.0.1', 10033) (WELCOME 127.0.0.1 11033)
+Send me->('127.0.0.1', 11033) (WELCOME 127.0.0.1 11033)
+Voting initiated by node 2
+Sending to left node.ELECTION 2
+Sending to left node.ELECTION 2
+I'm the new leader.
+Sending to left node.ELECTED 2
+I'm the new leader.
+Sending to left node.ELECTED 2
+len conn=2
+Send me->('127.0.0.1', 10033) (BYE 127.0.0.1 9033)
+Send me->('127.0.0.1', 11033) (BYE 127.0.0.1 9033)
+Client: end->True
+closing clientsocket
+Server terminating

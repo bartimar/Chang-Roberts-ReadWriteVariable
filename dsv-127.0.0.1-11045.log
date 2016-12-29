@@ -1,0 +1,90 @@
+dport=9045
+adding node 127.0.0.1 11045
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9045
+node appended, connection created
+adding conn 127.0.0.1 9045
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9045) (HELLO 127.0.0.1 11045)
+Received new connection
+adding node 127.0.0.1 9045
+currently have 2 nodes
+adding node 127.0.0.1 10045
+node appended, connection created
+adding conn 127.0.0.1 10045
+currently have 2 connections
+adding node 127.0.0.1 11045
+currently have 3 nodes
+adding node 127.0.0.1 11045
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 10045
+currently have 3 nodes
+Voting initiated by node 1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION2 ==1
+Sending to left node (1->0) ELECTION 2
+really sending that msg
+Received ELECTION2 ==1
+Sending to left node (1->0) ELECTION 2
+really sending that msg
+Received ELECTED 2
+System has a new leader: id=2
+Sending to left node (1->0) ELECTED 2
+really sending that msg
+Received ELECTED 2
+System has a new leader: id=2
+Sending to left node (1->0) ELECTED 2
+really sending that msg
+received BYE from 127.0.0.1 9045
+deleting conn 127.0.0.1 9045
+127.0.0.1==127.0.0.1 9045==9045
+deleted
+deleting node 127.0.0.1 9045 id=2
+leader left, starting new election
+Voting initiated by node 1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION0 ==1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION1 ==1
+I'm the new leader.
+Sending to left node (1->0) ELECTED 1
+really sending that msg
+Received ELECTION1 ==1
+I'm the new leader.
+Sending to left node (1->0) ELECTED 1
+really sending that msg
+Received ELECTED 1
+Received ELECTED 1
+------------------------------
+127.0.0.1 10045
+127.0.0.1 11045(me) = leader
+total=2
+------------------------------
+len conn=1
+Send me->('127.0.0.1', 10045) (ahojky)
+len conn=1
+Send me->('127.0.0.1', 10045) (SET 11)
+Changing variable 11->66
+wrong command ""!
+------------------------------
+127.0.0.1 10045
+127.0.0.1 11045(me) = leader
+total=2
+------------------------------
+len conn=1
+Send me->('127.0.0.1', 10045) (ahojky)
+------------------------------
+127.0.0.1 10045
+127.0.0.1 11045(me) = leader
+total=2
+------------------------------
+len conn=1
+Send me->('127.0.0.1', 10045) (ahojky)
+shared variable: 66

@@ -1,0 +1,38 @@
+dport=-1
+First node started on port 9223
+Connection from ('127.0.0.1', 9223)
+adding node:127.0.0.1 10010
+adding node 127.0.0.1 10010
+127.0.0.1:9223 127.0.0.1:10010
+adding conn 127.0.0.1 10010
+currently have 1 connections
+currently have 1 nodes
+to cmp: 127.0.0.1==127.0.0.1 and 10010==9223
+RECV:('127.0.0.1', 9223)> HELLO 127.0.0.1 10010
+Send me->127.0.0.1 10010 (HELLO 127.0.0.1 11004)
+adding node:127.0.0.1 11004
+adding node 127.0.0.1 11004
+127.0.0.1:9223 127.0.0.1:11004
+adding conn 127.0.0.1 11004
+currently have 2 connections
+currently have 2 nodes
+to cmp: 127.0.0.1==127.0.0.1 and 10010==9223
+to cmp: 127.0.0.1==127.0.0.1 and 11004==9223
+RECV:('127.0.0.1', 9223)> HELLO 127.0.0.1 11004
+Send me->127.0.0.1 10010 (HELLO 127.0.0.1 9223 127.0.0.1 11004)
+Send me->127.0.0.1 11004 (HELLO 127.0.0.1 9223 127.0.0.1 11004)
+adding node:127.0.0.1 9223 127.0.0.1 11004
+adding node 127.0.0.1 9223
+127.0.0.1:9223 127.0.0.1:9223
+adding node 127.0.0.1 11004
+currently have 2 nodes
+RECV:('127.0.0.1', 9223)> HELLO 127.0.0.1 9223 127.0.0.1 11004
+Connection from ('127.0.0.1', 9223)
+Send me->127.0.0.1 10010 (HELLO 127.0.0.1 9223 127.0.0.1 11004HELLO 127.0.0.1 9223 127.0.0)
+Send me->127.0.0.1 11004 (HELLO 127.0.0.1 9223 127.0.0.1 11004HELLO 127.0.0.1 9223 127.0.0)
+adding node:127.0.0.1 9223 127.0.0.1 11004HELLO 127.0.0.1 9223 127.0.0
+adding node 127.0.0.1 9223
+127.0.0.1:9223 127.0.0.1:9223
+adding node 127.0.0.1 11004HELLO
+127.0.0.1:9223 127.0.0.1:11004HELLO
+adding conn 127.0.0.1 11004HELLO

@@ -1,0 +1,25 @@
+dport=-1
+First node started on port 9222
+Connection from ('127.0.0.1', 9222)
+adding node:127.0.0.1 10009
+adding node 127.0.0.1 10009
+127.0.0.1:9222 127.0.0.1:10009
+adding conn 127.0.0.1 10009
+currently have 1 connections
+currently have 1 nodes
+RECV:('127.0.0.1', 9222)> HELLO 127.0.0.1 10009
+Send me->127.0.0.1 10009 (HELLO 127.0.0.1 11003)
+adding node:127.0.0.1 11003
+adding node 127.0.0.1 11003
+127.0.0.1:9222 127.0.0.1:11003
+adding conn 127.0.0.1 11003
+currently have 2 connections
+currently have 2 nodes
+RECV:('127.0.0.1', 9222)> HELLO 127.0.0.1 11003
+Send me->127.0.0.1 10009 (HELLO 127.0.0.1 10009 127.0.0.1 11003HELLO 127.0.0.1 9222 127.0.)
+Send me->127.0.0.1 11003 (HELLO 127.0.0.1 10009 127.0.0.1 11003HELLO 127.0.0.1 9222 127.0.)
+adding node:127.0.0.1 10009 127.0.0.1 11003HELLO 127.0.0.1 9222 127.0.
+adding node 127.0.0.1 10009
+adding node 127.0.0.1 11003HELLO
+127.0.0.1:9222 127.0.0.1:11003HELLO
+adding conn 127.0.0.1 11003HELLO

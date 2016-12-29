@@ -1,0 +1,60 @@
+1: dport=9052
+1: adding node 127.0.0.1 10052
+1: node appended, connection created
+1: currently have 1 nodes
+1: adding node 127.0.0.1 9052
+1: node appended, connection created
+1: adding conn 127.0.0.1 9052
+1: currently have 1 connections
+1: currently have 2 nodes
+1: len conn=1
+1: Send me->('127.0.0.1', 9052) (HELLO 127.0.0.1 10052)
+1: Received new connection
+1: adding node 127.0.0.1 9052
+1: currently have 2 nodes
+1: adding node 127.0.0.1 10052
+1: currently have 2 nodes
+1: adding node 127.0.0.1 10052
+1: currently have 2 nodes
+2: Voting initiated by node 0
+2: Sending to left node (0->1) ELECTION 0
+2: really sending that msg
+2: Received ELECTION1 ==0
+2: Sending to left node (0->1) ELECTION 1
+2: really sending that msg
+2: Received ELECTION1 ==0
+2: Sending to left node (0->1) ELECTION 1
+2: really sending that msg
+2: Received ELECTED 1
+2: System has a new leader: id=1
+2: Sending to left node (0->1) ELECTED 1
+2: really sending that msg
+2: Received ELECTED 1
+2: System has a new leader: id=1
+2: Sending to left node (0->1) ELECTED 1
+2: really sending that msg
+14: adding node 127.0.0.1 11052
+14: node appended, connection created
+14: adding conn 127.0.0.1 11052
+14: currently have 2 connections
+14: currently have 3 nodes
+14: Received new connection
+14: adding node 127.0.0.1 11052
+14: currently have 3 nodes
+15: Received ELECTION1 ==0
+15: Sending to left node (0->2) ELECTION 1
+15: really sending that msg
+15: Received ELECTION2 ==0
+15: Sending to left node (0->2) ELECTION 2
+15: really sending that msg
+15: Received ELECTION2 ==0
+15: Sending to left node (0->2) ELECTION 2
+15: really sending that msg
+15: Received ELECTED 2
+15: System has a new leader: id=2
+15: Sending to left node (0->2) ELECTED 2
+15: really sending that msg
+15: Received ELECTED 2
+15: System has a new leader: id=2
+15: Sending to left node (0->2) ELECTED 2
+15: really sending that msg

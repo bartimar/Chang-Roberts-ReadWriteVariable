@@ -1,0 +1,9 @@
+dport=-1
+First node started on port 9220
+Connection from ('127.0.0.1', 9220)
+adding node:127.0.0.1 10007
+adding node 127.0.0.1 10007
+127.0.0.1:9220 127.0.0.1:10007
+adding conn 127.0.0.1 10007
+currently have 1 connections
+currently have 1 nodes

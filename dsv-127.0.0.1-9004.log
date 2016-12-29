@@ -1,0 +1,63 @@
+dport=-1
+adding node 127.0.0.1 9004
+node appended, connection created
+currently have 1 nodes
+First node started on port 9004
+------------------------------
+127.0.0.1 9004(me)
+total=1
+------------------------------
+Received new connection
+adding node 127.0.0.1 10004
+node appended, connection created
+adding conn 127.0.0.1 10004
+currently have 1 connections
+currently have 2 nodes
+RECV:('127.0.0.1', 9004)> WELCOME 127.0.0.1 10004
+adding node 127.0.0.1 10004
+currently have 2 nodes
+Send me->127.0.0.1 10004 (WELCOME 127.0.0.1 10004)
+Send me->('127.0.0.1', 10004) (WELCOME 127.0.0.1 10004)
+Sending to left node. My id=1 left=0 (127.0.0.1 10004)
+RECV:('127.0.0.1', 9004)> HELLO 127.0.0.1 10004
+I'm the new leader.
+Sending to left node. My id=1 left=0 (127.0.0.1 10004)
+RECV:('127.0.0.1', 9004)> ELECTION 1
+RECV:('127.0.0.1', 9004)> ELECTED 1
+------------------------------
+127.0.0.1 10004
+127.0.0.1 9004(me) = leader
+total=2
+------------------------------
+Received new connection
+adding node 127.0.0.1 11004
+node appended, connection created
+adding conn 127.0.0.1 11004
+currently have 2 connections
+currently have 3 nodes
+RECV:('127.0.0.1', 9004)> WELCOME 127.0.0.1 11004
+adding node 127.0.0.1 11004
+currently have 3 nodes
+Send me->127.0.0.1 11004 (WELCOME 127.0.0.1 10004 127.0.0.1 11004)
+Send me->('127.0.0.1', 10004) (WELCOME 127.0.0.1 11004)
+Send me->('127.0.0.1', 11004) (WELCOME 127.0.0.1 11004)
+Sending to left node. My id=2 left=1 (127.0.0.1 11004)
+RECV:('127.0.0.1', 9004)> HELLO 127.0.0.1 11004
+I'm the new leader.
+Sending to left node. My id=2 left=1 (127.0.0.1 11004)
+RECV:('127.0.0.1', 9004)> ELECTION 2
+RECV:('127.0.0.1', 9004)> ELECTED 2
+------------------------------
+127.0.0.1 10004
+127.0.0.1 11004
+127.0.0.1 9004(me) = leader
+total=3
+------------------------------
+Changing variable default->11
+RECV:('127.0.0.1', 9004)> SET 11
+Changing variable 11->33
+RECV:('127.0.0.1', 9004)> SET 33
+Send me->('127.0.0.1', 10004) (BYE 127.0.0.1 9004)
+Send me->('127.0.0.1', 11004) (BYE 127.0.0.1 9004)
+Client: end->True
+closing clientsocket

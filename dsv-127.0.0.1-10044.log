@@ -1,0 +1,94 @@
+dport=9044
+adding node 127.0.0.1 10044
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9044
+node appended, connection created
+adding conn 127.0.0.1 9044
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9044) (HELLO 127.0.0.1 10044)
+Received new connection
+adding node 127.0.0.1 9044
+currently have 2 nodes
+adding node 127.0.0.1 10044
+currently have 2 nodes
+adding node 127.0.0.1 10044
+currently have 2 nodes
+Voting initiated by node 0
+Sending to left node (0->1) ELECTION 0
+really sending that msg
+Received ELECTION1 ==0
+Sending to left node (0->1) ELECTION 1
+really sending that msg
+Received ELECTION1 ==0
+Sending to left node (0->1) ELECTION 1
+really sending that msg
+Received ELECTED 1
+System has a new leader: id=1
+Sending to left node (0->1) ELECTED 1
+really sending that msg
+Received ELECTED 1
+System has a new leader: id=1
+Sending to left node (0->1) ELECTED 1
+really sending that msg
+adding node 127.0.0.1 11044
+node appended, connection created
+adding conn 127.0.0.1 11044
+currently have 2 connections
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 11044
+currently have 3 nodes
+Received ELECTION1 ==0
+Sending to left node (0->2) ELECTION 1
+really sending that msg
+Received ELECTION2 ==0
+Sending to left node (0->2) ELECTION 2
+really sending that msg
+Received ELECTION2 ==0
+Sending to left node (0->2) ELECTION 2
+really sending that msg
+Received ELECTED 2
+System has a new leader: id=2
+Sending to left node (0->2) ELECTED 2
+really sending that msg
+Received ELECTED 2
+System has a new leader: id=2
+Sending to left node (0->2) ELECTED 2
+really sending that msg
+received BYE from 127.0.0.1 9044
+deleting conn 127.0.0.1 9044
+127.0.0.1==127.0.0.1 9044==9044
+deleted
+deleting node 127.0.0.1 9044 id=2
+Voting initiated by node 0
+Sending to left node (0->1) ELECTION 0
+really sending that msg
+Received ELECTION1 ==0
+Sending to left node (0->1) ELECTION 1
+really sending that msg
+Received ELECTION1 ==0
+Sending to left node (0->1) ELECTION 1
+really sending that msg
+Received ELECTED 1
+System has a new leader: id=1
+Sending to left node (0->1) ELECTED 1
+really sending that msg
+Received ELECTED 1
+System has a new leader: id=1
+Sending to left node (0->1) ELECTED 1
+really sending that msg
+------------------------------
+127.0.0.1 10044(me)
+127.0.0.1 11044 = leader
+total=2
+------------------------------
+len conn=1
+Send me->('127.0.0.1', 11044) (ahojky)
+len conn=1
+Send me->('127.0.0.1', 11044) (BYE 127.0.0.1 10044)
+Client: end->True
+closing clientsocket
+Server terminating

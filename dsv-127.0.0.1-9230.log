@@ -1,0 +1,12 @@
+dport=-1
+First node started on port 9230
+Connection from ('127.0.0.1', 9230)
+adding node:127.0.0.1 10017
+adding node 127.0.0.1 10017
+127.0.0.1:9230 127.0.0.1:10017
+adding conn 127.0.0.1 10017
+currently have 1 connections
+currently have 1 nodes
+to cmp: 127.0.0.1==127.0.0.1 and 10017==9230
+remote:127.0.0.1 10017 msg:WELCOME
+RECV:('127.0.0.1', 9230)> HELLO 127.0.0.1 10017

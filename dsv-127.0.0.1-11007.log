@@ -1,0 +1,41 @@
+dport=9007
+adding node 127.0.0.1 11007
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9007
+node appended, connection created
+adding conn 127.0.0.1 9007
+currently have 1 connections
+currently have 2 nodes
+Send me->('127.0.0.1', 9007) (HELLO 127.0.0.1 11007)
+Received new connection
+adding node 127.0.0.1 9007
+currently have 2 nodes
+RECV:('127.0.0.1', 11007)> WELCOME 127.0.0.1 9007
+adding node 127.0.0.1 10007
+node appended, connection created
+adding conn 127.0.0.1 10007
+currently have 2 connections
+adding node 127.0.0.1 11007
+currently have 3 nodes
+RECV:('127.0.0.1', 11007)> WELCOME 127.0.0.1 10007 127.0.0.1 11007
+adding node 127.0.0.1 11007
+currently have 3 nodes
+RECV:('127.0.0.1', 11007)> WELCOME 127.0.0.1 11007
+Received new connection
+adding node 127.0.0.1 10007
+currently have 3 nodes
+RECV:('127.0.0.1', 11007)> WELCOME 127.0.0.1 10007
+Sending to left node. My id=1 left=0 (127.0.0.1 10007)
+RECV:('127.0.0.1', 11007)> ELECTION 2
+System has a new leader: id=2
+Sending to left node. My id=1 left=0 (127.0.0.1 10007)
+RECV:('127.0.0.1', 11007)> ELECTED 2
+received BYE from 127.0.0.1 10007
+deleting conn 127.0.0.1 10007
+deleting node 127.0.0.1 10007 id=0
+------------------------------
+127.0.0.1 11007(me)
+127.0.0.1 9007
+total=2
+------------------------------

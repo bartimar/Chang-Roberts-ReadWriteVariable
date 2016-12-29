@@ -1,0 +1,48 @@
+1: dport=9052
+1: adding node 127.0.0.1 11052
+1: node appended, connection created
+1: currently have 1 nodes
+1: adding node 127.0.0.1 9052
+1: node appended, connection created
+1: adding conn 127.0.0.1 9052
+1: currently have 1 connections
+1: currently have 2 nodes
+1: len conn=1
+1: Send me->('127.0.0.1', 9052) (HELLO 127.0.0.1 11052)
+1: Received new connection
+1: adding node 127.0.0.1 9052
+1: currently have 2 nodes
+1: adding node 127.0.0.1 10052
+1: node appended, connection created
+1: adding conn 127.0.0.1 10052
+1: currently have 2 connections
+1: adding node 127.0.0.1 11052
+1: currently have 3 nodes
+1: adding node 127.0.0.1 11052
+1: currently have 3 nodes
+1: Received new connection
+1: adding node 127.0.0.1 10052
+1: currently have 3 nodes
+2: Voting initiated by node 1
+2: Sending to left node (1->0) ELECTION 1
+2: really sending that msg
+2: Received ELECTION2 ==1
+2: Sending to left node (1->0) ELECTION 2
+2: really sending that msg
+2: Received ELECTION2 ==1
+2: Sending to left node (1->0) ELECTION 2
+2: really sending that msg
+2: Received ELECTED 2
+2: System has a new leader: id=2
+2: Sending to left node (1->0) ELECTED 2
+2: really sending that msg
+2: Received ELECTED 2
+2: System has a new leader: id=2
+2: Sending to left node (1->0) ELECTED 2
+2: really sending that msg
+11: ------------------------------
+11: 127.0.0.1 10052
+11: 127.0.0.1 11052(me)
+11: 127.0.0.1 9052 = leader
+11: total=3
+11: ------------------------------

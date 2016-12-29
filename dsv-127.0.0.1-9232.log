@@ -1,0 +1,77 @@
+dport=-1
+First node started on port 9232
+Connection from ('127.0.0.1', 9232)
+adding node:127.0.0.1 10019
+adding node 127.0.0.1 10019
+127.0.0.1:9232 127.0.0.1:10019
+adding conn 127.0.0.1 10019
+currently have 1 connections
+currently have 1 nodes
+to cmp: 127.0.0.1==127.0.0.1 and 10019==9232
+remote:127.0.0.1 10019 msg:WELCOME 127.0.0.1 10019
+RECV:('127.0.0.1', 9232)> HELLO 127.0.0.1 10019
+------------------------------
+127.0.0.1:9232 (me)
+127.0.0.1 10019
+total=2
+------------------------------
+got welcome msg: WELCOME 127.0.0.1 11013
+adding node:127.0.0.1 11013
+adding node 127.0.0.1 11013
+127.0.0.1:9232 127.0.0.1:11013
+adding conn 127.0.0.1 11013
+currently have 2 connections
+currently have 2 nodes
+RECV:('127.0.0.1', 9232)> WELCOME 127.0.0.1 11013
+Connection from ('127.0.0.1', 9232)
+------------------------------
+127.0.0.1:9232 (me)
+127.0.0.1 10019
+127.0.0.1 11013
+total=3
+------------------------------
+shared variable: default
+Send me->127.0.0.1 10019 (SET 154)
+Send me->127.0.0.1 11013 (SET 154)
+shared variable: 154
+------------------------------
+127.0.0.1:9232 (me)
+127.0.0.1 10019
+127.0.0.1 11013
+total=3
+------------------------------
+shared variable: 154
+Send me->127.0.0.1 10019 (SET 111)
+Send me->127.0.0.1 11013 (SET 111)
+Changing variable 111->222
+RECV:('127.0.0.1', 9232)> SET 222
+shared variable: 222
+Send me->127.0.0.1 10019 (SET 111)
+Send me->127.0.0.1 11013 (SET 111)
+shared variable: 111
+shared variable: 111
+Send me->127.0.0.1 10019 (SET 111)
+Send me->127.0.0.1 11013 (SET 111)
+Changing variable 111->222
+RECV:('127.0.0.1', 9232)> SET 222
+------------------------------
+127.0.0.1:9232 (me)
+127.0.0.1 10019
+127.0.0.1 11013
+total=3
+------------------------------
+------------------------------
+127.0.0.1:9232 (me)
+127.0.0.1 10019
+127.0.0.1 11013
+total=3
+------------------------------
+Changing variable 222->222
+RECV:('127.0.0.1', 9232)> SET 222
+Connection from ('127.0.0.1', 9232)
+Send me->127.0.0.1 10019 (WELCOME 127.0.0.1 12000SET 151BYE 127.0.0.1 12000)
+Send me->127.0.0.1 11013 (WELCOME 127.0.0.1 12000SET 151BYE 127.0.0.1 12000)
+adding node:127.0.0.1 12000SET 151BYE 127.0.0.1 12000
+adding node 127.0.0.1 12000SET
+127.0.0.1:9232 127.0.0.1:12000SET
+adding conn 127.0.0.1 12000SET

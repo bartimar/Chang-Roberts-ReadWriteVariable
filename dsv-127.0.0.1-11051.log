@@ -1,0 +1,11 @@
+1: dport=9051
+1: adding node 127.0.0.1 11051
+1: node appended, connection created
+1: currently have 1 nodes
+1: adding node 127.0.0.1 9051
+1: node appended, connection created
+1: adding conn 127.0.0.1 9051
+1: currently have 1 connections
+1: currently have 2 nodes
+1: len conn=1
+1: Send me->('127.0.0.1', 9051) (HELLO 127.0.0.1 11051)

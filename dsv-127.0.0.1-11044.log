@@ -1,0 +1,83 @@
+dport=9044
+adding node 127.0.0.1 11044
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9044
+node appended, connection created
+adding conn 127.0.0.1 9044
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9044) (HELLO 127.0.0.1 11044)
+Received new connection
+adding node 127.0.0.1 9044
+currently have 2 nodes
+adding node 127.0.0.1 10044
+node appended, connection created
+adding conn 127.0.0.1 10044
+currently have 2 connections
+adding node 127.0.0.1 11044
+currently have 3 nodes
+adding node 127.0.0.1 11044
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 10044
+currently have 3 nodes
+Voting initiated by node 1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION2 ==1
+Sending to left node (1->0) ELECTION 2
+really sending that msg
+Received ELECTION2 ==1
+Sending to left node (1->0) ELECTION 2
+really sending that msg
+Received ELECTED 2
+System has a new leader: id=2
+Sending to left node (1->0) ELECTED 2
+really sending that msg
+Received ELECTED 2
+System has a new leader: id=2
+Sending to left node (1->0) ELECTED 2
+really sending that msg
+received BYE from 127.0.0.1 9044
+deleting conn 127.0.0.1 9044
+127.0.0.1==127.0.0.1 9044==9044
+deleted
+deleting node 127.0.0.1 9044 id=2
+leader left, starting new election
+Voting initiated by node 1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION0 ==1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION1 ==1
+I'm the new leader.
+Sending to left node (1->0) ELECTED 1
+really sending that msg
+Received ELECTION1 ==1
+I'm the new leader.
+Sending to left node (1->0) ELECTED 1
+really sending that msg
+Received ELECTED 1
+Received ELECTED 1
+received BYE from 127.0.0.1 10044
+deleting conn 127.0.0.1 10044
+127.0.0.1==127.0.0.1 10044==10044
+deleted
+deleting node 127.0.0.1 10044 id=0
+Voting initiated by node 0
+Sending to left node (0->0) ELECTION 0
+wrong command ""!
+wrong command ""!
+shared variable: default
+len conn=0
+------------------------------
+127.0.0.1 11044(me)
+total=1
+------------------------------
+len conn=0
+len conn=0
+Client: end->True
+closing clientsocket

@@ -1,0 +1,35 @@
+dport=9006
+adding node 127.0.0.1 11006
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9006
+node appended, connection created
+adding conn 127.0.0.1 9006
+currently have 1 connections
+currently have 2 nodes
+Send me->('127.0.0.1', 9006) (HELLO 127.0.0.1 11006)
+Received new connection
+adding node 127.0.0.1 9006
+currently have 2 nodes
+RECV:('127.0.0.1', 11006)> WELCOME 127.0.0.1 9006
+adding node 127.0.0.1 10006
+node appended, connection created
+adding conn 127.0.0.1 10006
+currently have 2 connections
+adding node 127.0.0.1 11006
+currently have 3 nodes
+RECV:('127.0.0.1', 11006)> WELCOME 127.0.0.1 10006 127.0.0.1 11006
+Received new connection
+adding node 127.0.0.1 11006
+currently have 3 nodes
+RECV:('127.0.0.1', 11006)> WELCOME 127.0.0.1 11006
+adding node 127.0.0.1 10006
+currently have 3 nodes
+RECV:('127.0.0.1', 11006)> WELCOME 127.0.0.1 10006
+Sending to left node. My id=1 left=0 (127.0.0.1 10006)
+RECV:('127.0.0.1', 11006)> ELECTION 2
+System has a new leader: id=2
+Sending to left node. My id=1 left=0 (127.0.0.1 10006)
+RECV:('127.0.0.1', 11006)> ELECTED 2
+Changing variable default->22
+RECV:('127.0.0.1', 11006)> SET 22

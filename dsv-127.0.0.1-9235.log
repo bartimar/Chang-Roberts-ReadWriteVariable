@@ -1,0 +1,32 @@
+dport=-1
+First node started on port 9235
+Connection from ('127.0.0.1', 9235)
+about to receive: id=('127.0.0.1', 9235)
+adding node:127.0.0.1 10022
+adding node 127.0.0.1 10022
+127.0.0.1:9235 127.0.0.1:10022
+adding conn 127.0.0.1 10022
+currently have 1 connections
+currently have 1 nodes
+to cmp: 127.0.0.1==127.0.0.1 and 10022==9235
+remote:127.0.0.1 10022 msg:WELCOME 127.0.0.1 10022
+RECV:('127.0.0.1', 9235)> HELLO 127.0.0.1 10022
+about to receive: id=('127.0.0.1', 9235)
+got welcome msg: WELCOME 127.0.0.1 11016
+adding node:127.0.0.1 11016
+adding node 127.0.0.1 11016
+127.0.0.1:9235 127.0.0.1:11016
+adding conn 127.0.0.1 11016
+currently have 2 connections
+currently have 2 nodes
+RECV:('127.0.0.1', 9235)> WELCOME 127.0.0.1 11016
+shared variable: default
+Send me->127.0.0.1 10022 (SET 11)
+Send me->127.0.0.1 11016 (SET 11)
+shared variable: 11
+Send me->127.0.0.1 10022 (SET 11)
+Send me->127.0.0.1 11016 (SET 11)
+about to receive: id=('127.0.0.1', 9235)
+Changing variable 11->22
+RECV:('127.0.0.1', 9235)> SET 22
+shared variable: 22

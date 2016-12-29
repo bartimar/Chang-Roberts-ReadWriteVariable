@@ -1,0 +1,69 @@
+dport=9041
+adding node 127.0.0.1 11041
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9041
+node appended, connection created
+adding conn 127.0.0.1 9041
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9041) (HELLO 127.0.0.1 11041)
+Received new connection
+adding node 127.0.0.1 9041
+currently have 2 nodes
+adding node 127.0.0.1 10041
+node appended, connection created
+adding conn 127.0.0.1 10041
+currently have 2 connections
+adding node 127.0.0.1 11041
+currently have 3 nodes
+adding node 127.0.0.1 11041
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 10041
+currently have 3 nodes
+Voting initiated by node 1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION2 ==1
+Sending to left node (1->0) ELECTION 2
+really sending that msg
+Received ELECTION2 ==1
+Sending to left node (1->0) ELECTION 2
+really sending that msg
+Received ELECTED 2
+System has a new leader: id=2
+Sending to left node (1->0) ELECTED 2
+really sending that msg
+Received ELECTED 2
+System has a new leader: id=2
+Sending to left node (1->0) ELECTED 2
+really sending that msg
+received BYE from 127.0.0.1 9041
+deleting conn 127.0.0.1 9041
+127.0.0.1==127.0.0.1 9041==9041
+deleted
+deleting node 127.0.0.1 9041 id=2
+leader left, starting new election
+Voting initiated by node 1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+len conn=1
+Send me->('127.0.0.1', 10041) (SET 55)
+------------------------------
+127.0.0.1 10041
+127.0.0.1 11041(me)
+total=2
+------------------------------
+len conn=1
+Send me->('127.0.0.1', 10041) (ahojky)
+------------------------------
+127.0.0.1 10041
+127.0.0.1 11041(me)
+total=2
+------------------------------
+len conn=1
+Send me->('127.0.0.1', 10041) (ahojky)
+len conn=1
+Send me->('127.0.0.1', 10041) (SET 85)

@@ -1,0 +1,17 @@
+dport=11013
+adding node:127.0.0.1 11013
+adding node 127.0.0.1 11013
+127.0.0.1:12002 127.0.0.1:11013
+adding conn 127.0.0.1 11013
+currently have 1 connections
+currently have 1 nodes
+Send me->127.0.0.1 11013 (HELLO 127.0.0.1 12002)
+shared variable: default
+Send me->127.0.0.1 11013 (SET 546165)
+Send me->127.0.0.1 11013 (SET 111)
+shared variable: 111
+------------------------------
+127.0.0.1:12002 (me)
+127.0.0.1 11013
+total=2
+------------------------------

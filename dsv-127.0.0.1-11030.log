@@ -1,0 +1,42 @@
+dport=9030
+adding node 127.0.0.1 11030
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9030
+node appended, connection created
+adding conn 127.0.0.1 9030
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9030) (HELLO 127.0.0.1 11030)
+Received new connection
+adding node 127.0.0.1 9030
+currently have 2 nodes
+adding node 127.0.0.1 10030
+node appended, connection created
+adding conn 127.0.0.1 10030
+currently have 2 connections
+adding node 127.0.0.1 11030
+currently have 3 nodes
+adding node 127.0.0.1 11030
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 10030
+currently have 3 nodes
+Voting initiated by node 1
+Sending to left node.ELECTION 1
+Sending to left node.ELECTION 2
+Sending to left node.ELECTION 2
+System has a new leader: id=2
+Sending to left node.ELECTED 2
+System has a new leader: id=2
+Sending to left node.ELECTED 2
+received BYE from 127.0.0.1 10030
+deleting conn 127.0.0.1 10030
+127.0.0.1==127.0.0.1 9030==10030
+127.0.0.1==127.0.0.1 10030==10030
+deleted
+deleting node 127.0.0.1 10030 id=0
+Voting initiated by node 0
+Sending to left node.ELECTION 0
+Sending to left node.ELECTION 1

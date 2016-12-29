@@ -1,0 +1,73 @@
+dport=-1
+adding node 127.0.0.1 9047
+node appended, connection created
+currently have 1 nodes
+First node started on port 9047
+Received new connection
+adding node 127.0.0.1 10047
+node appended, connection created
+adding conn 127.0.0.1 10047
+currently have 1 connections
+currently have 2 nodes
+adding node 127.0.0.1 10047
+currently have 2 nodes
+Send me->127.0.0.1 10047 (WELCOME 127.0.0.1 10047)
+len conn=1
+Send me->('127.0.0.1', 10047) (WELCOME 127.0.0.1 10047)
+Voting initiated by node 1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION0 ==1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION1 ==1
+I'm the new leader.
+Sending to left node (1->0) ELECTED 1
+really sending that msg
+Received ELECTION1 ==1
+I'm the new leader.
+Sending to left node (1->0) ELECTED 1
+really sending that msg
+Received ELECTED 1
+Received ELECTED 1
+Received new connection
+adding node 127.0.0.1 11047
+node appended, connection created
+adding conn 127.0.0.1 11047
+currently have 2 connections
+currently have 3 nodes
+adding node 127.0.0.1 11047
+currently have 3 nodes
+Send me->127.0.0.1 11047 (WELCOME 127.0.0.1 10047 127.0.0.1 11047)
+len conn=2
+Send me->('127.0.0.1', 10047) (WELCOME 127.0.0.1 11047)
+Send me->('127.0.0.1', 11047) (WELCOME 127.0.0.1 11047)
+Voting initiated by node 2
+Sending to left node (2->1) ELECTION 2
+really sending that msg
+Received ELECTION1 ==2
+Sending to left node (2->1) ELECTION 2
+really sending that msg
+Received ELECTION2 ==2
+I'm the new leader.
+Sending to left node (2->1) ELECTED 2
+really sending that msg
+Received ELECTION2 ==2
+I'm the new leader.
+Sending to left node (2->1) ELECTED 2
+really sending that msg
+Received ELECTED 2
+Received ELECTED 2
+shared variable: default
+sending to leader: SET 11
+len conn=2
+Send me->('127.0.0.1', 10047) (SET 11)
+Send me->('127.0.0.1', 11047) (SET 11)
+Changing variable 11->22
+len conn=2
+Send me->('127.0.0.1', 10047) (SET 22)
+Send me->('127.0.0.1', 11047) (SET 22)
+Changing variable 22->33
+len conn=2
+Send me->('127.0.0.1', 10047) (SET 33)
+Send me->('127.0.0.1', 11047) (SET 33)

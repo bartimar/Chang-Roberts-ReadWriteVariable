@@ -1,0 +1,12 @@
+dport=9020
+adding node 127.0.0.1 11020
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9020
+node appended, connection created
+adding conn 127.0.0.1 9020
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9020) (HELLO 127.0.0.1 11020)
+Sending to left node. My id=0 left=1 (127.0.0.1 9020)

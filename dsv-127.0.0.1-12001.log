@@ -1,0 +1,11 @@
+dport=10019
+adding node:127.0.0.1 10019
+adding node 127.0.0.1 10019
+127.0.0.1:12001 127.0.0.1:10019
+adding conn 127.0.0.1 10019
+currently have 1 connections
+currently have 1 nodes
+Send me->127.0.0.1 10019 (HELLO 127.0.0.1 12001)
+Send me->127.0.0.1 10019 (BYE 127.0.0.1 12001)
+Client: end->True
+Server terminating

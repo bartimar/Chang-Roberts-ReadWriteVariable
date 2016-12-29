@@ -1,0 +1,47 @@
+dport=9029
+adding node 127.0.0.1 10029
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9029
+node appended, connection created
+adding conn 127.0.0.1 9029
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9029) (HELLO 127.0.0.1 10029)
+Received new connection
+adding node 127.0.0.1 9029
+currently have 2 nodes
+adding node 127.0.0.1 10029
+currently have 2 nodes
+adding node 127.0.0.1 10029
+currently have 2 nodes
+Voting initiated by node 0
+Sending to left node.ELECTION 0
+Sending to left node.ELECTION 1
+Sending to left node.ELECTION 1
+System has a new leader: id=1
+Sending to left node.ELECTED 1
+System has a new leader: id=1
+Sending to left node.ELECTED 1
+adding node 127.0.0.1 11029
+node appended, connection created
+adding conn 127.0.0.1 11029
+currently have 2 connections
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 11029
+currently have 3 nodes
+Sending to left node.ELECTION 1
+Sending to left node.ELECTION 2
+Sending to left node.ELECTION 2
+System has a new leader: id=2
+Sending to left node.ELECTED 2
+System has a new leader: id=2
+Sending to left node.ELECTED 2
+len conn=2
+Send me->('127.0.0.1', 9029) (BYE 127.0.0.1 10029)
+Send me->('127.0.0.1', 11029) (BYE 127.0.0.1 10029)
+Client: end->True
+closing clientsocket
+Server terminating

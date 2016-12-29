@@ -1,0 +1,58 @@
+dport=9018
+adding node 127.0.0.1 11018
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9018
+node appended, connection created
+adding conn 127.0.0.1 9018
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9018) (HELLO 127.0.0.1 11018)
+Received new connection
+adding node 127.0.0.1 9018
+currently have 2 nodes
+adding node 127.0.0.1 10018
+node appended, connection created
+adding conn 127.0.0.1 10018
+currently have 2 connections
+adding node 127.0.0.1 11018
+currently have 3 nodes
+adding node 127.0.0.1 11018
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 10018
+currently have 3 nodes
+Sending to left node. My id=1 left=0 (127.0.0.1 10018)
+System has a new leader: id=2
+Sending to left node. My id=1 left=0 (127.0.0.1 10018)
+received BYE from 127.0.0.1 10018
+deleting conn 127.0.0.1 10018
+127.0.0.1==127.0.0.1 9018==10018
+127.0.0.1==127.0.0.1 10018==10018
+deleted
+deleting node 127.0.0.1 10018 id=0
+Sending to left node. My id=0 left=1 (127.0.0.1 9018)
+Sending to left node. My id=0 left=1 (127.0.0.1 9018)
+Changing variable default->115
+shared variable: 115
+len conn=1
+Send me->('127.0.0.1', 9018) (SET 66)
+------------------------------
+127.0.0.1 11018(me)
+127.0.0.1 9018
+total=2
+------------------------------
+shared variable: 66
+------------------------------
+127.0.0.1 11018(me)
+127.0.0.1 9018
+total=2
+------------------------------
+len conn=1
+Send me->('127.0.0.1', 9018) (SET 62)
+------------------------------
+127.0.0.1 11018(me)
+127.0.0.1 9018
+total=2
+------------------------------

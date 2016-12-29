@@ -1,0 +1,10 @@
+dport=-1
+First node started on port 9228
+Connection from ('127.0.0.1', 9228)
+adding node:127.0.0.1 10015
+adding node 127.0.0.1 10015
+127.0.0.1:9228 127.0.0.1:10015
+adding conn 127.0.0.1 10015
+currently have 1 connections
+currently have 1 nodes
+to cmp: 127.0.0.1==127.0.0.1 and 10015==9228

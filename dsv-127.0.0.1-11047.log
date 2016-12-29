@@ -1,0 +1,46 @@
+dport=9047
+adding node 127.0.0.1 11047
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9047
+node appended, connection created
+adding conn 127.0.0.1 9047
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9047) (HELLO 127.0.0.1 11047)
+Received new connection
+adding node 127.0.0.1 9047
+currently have 2 nodes
+adding node 127.0.0.1 10047
+node appended, connection created
+adding conn 127.0.0.1 10047
+currently have 2 connections
+adding node 127.0.0.1 11047
+currently have 3 nodes
+adding node 127.0.0.1 11047
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 10047
+currently have 3 nodes
+Voting initiated by node 1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION2 ==1
+Sending to left node (1->0) ELECTION 2
+really sending that msg
+Received ELECTION2 ==1
+Sending to left node (1->0) ELECTION 2
+really sending that msg
+Received ELECTED 2
+System has a new leader: id=2
+Sending to left node (1->0) ELECTED 2
+really sending that msg
+Received ELECTED 2
+System has a new leader: id=2
+Sending to left node (1->0) ELECTED 2
+really sending that msg
+Changing variable default->11
+Changing variable 11->22
+sending to leader: SET 33
+Changing variable 33->33

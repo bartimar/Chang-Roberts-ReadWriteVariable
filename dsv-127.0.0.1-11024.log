@@ -1,0 +1,13 @@
+dport=9024
+adding node 127.0.0.1 11024
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9024
+node appended, connection created
+adding conn 127.0.0.1 9024
+currently have 1 connections
+currently have 2 nodes
+len conn=1
+Send me->('127.0.0.1', 9024) (HELLO 127.0.0.1 11024)
+Voting initiated by node 0
+Sending to left node. My id=0 left=1 (127.0.0.1 9024)

@@ -1,0 +1,91 @@
+dport=10032
+adding node:127.0.0.1 10032
+adding node 127.0.0.1 10032
+127.0.0.1:13000 127.0.0.1:10032
+node appended, connection created
+adding conn 127.0.0.1 10032
+currently have 1 connections
+currently have 1 nodes
+Send me->('127.0.0.1', 10032) (HELLO 127.0.0.1 13000)
+Received new connection
+Server is about to receive data
+got welcome msg: WELCOME 127.0.0.1 10032
+adding node:127.0.0.1 10032
+adding node 127.0.0.1 10032
+currently have 1 nodes
+RECV:('127.0.0.1', 13000)> WELCOME 127.0.0.1 10032
+Server is about to receive data
+got welcome msg: WELCOME 127.0.0.1 9032 127.0.0.1 11024 127.0.0.1 12000 127.0.0.1 13000
+adding node:127.0.0.1 9032 127.0.0.1 11024 127.0.0.1 12000 127.0.0.1 13000
+adding node 127.0.0.1 9032
+127.0.0.1:13000 127.0.0.1:9032
+node appended, connection created
+adding conn 127.0.0.1 9032
+currently have 2 connections
+adding node 127.0.0.1 11024
+127.0.0.1:13000 127.0.0.1:11024
+node appended, connection created
+adding conn 127.0.0.1 11024
+currently have 3 connections
+adding node 127.0.0.1 12000
+127.0.0.1:13000 127.0.0.1:12000
+node appended, connection created
+adding conn 127.0.0.1 12000
+currently have 4 connections
+adding node 127.0.0.1 13000
+127.0.0.1:13000 127.0.0.1:13000
+currently have 4 nodes
+RECV:('127.0.0.1', 13000)> WELCOME 127.0.0.1 9032 127.0.0.1 11024 127.0.0.1 12000 127.0.0.1 13000
+Changing variable default->11
+RECV:('127.0.0.1', 13000)> SET 11
+Received new connection
+Server is about to receive data
+got welcome msg: WELCOME 127.0.0.1 13000
+adding node:127.0.0.1 13000
+adding node 127.0.0.1 13000
+127.0.0.1:13000 127.0.0.1:13000
+currently have 4 nodes
+RECV:('127.0.0.1', 13000)> WELCOME 127.0.0.1 13000
+Received new connection
+Server is about to receive data
+got welcome msg: WELCOME 127.0.0.1 9032
+adding node:127.0.0.1 9032
+adding node 127.0.0.1 9032
+currently have 4 nodes
+RECV:('127.0.0.1', 13000)> WELCOME 127.0.0.1 9032
+Received new connection
+Server is about to receive data
+got welcome msg: WELCOME 127.0.0.1 11024
+adding node:127.0.0.1 11024
+adding node 127.0.0.1 11024
+currently have 4 nodes
+RECV:('127.0.0.1', 13000)> WELCOME 127.0.0.1 11024
+Server is about to receive data
+got welcome msg: WELCOME 127.0.0.1 12000
+adding node:127.0.0.1 12000
+adding node 127.0.0.1 12000
+currently have 4 nodes
+RECV:('127.0.0.1', 13000)> WELCOME 127.0.0.1 12000
+shared variable: 11
+Send me->('127.0.0.1', 10032) (SET 666)
+Send me->('127.0.0.1', 9032) (SET 666)
+Send me->('127.0.0.1', 11024) (SET 666)
+Send me->('127.0.0.1', 12000) (SET 666)
+------------------------------
+127.0.0.1:13000 (me)
+127.0.0.1 10032
+127.0.0.1 9032
+127.0.0.1 11024
+127.0.0.1 12000
+total=5
+------------------------------
+('127.0.0.1', 10032)
+('127.0.0.1', 9032)
+('127.0.0.1', 11024)
+('127.0.0.1', 12000)
+------------------------------
+Send me->('127.0.0.1', 10032) (ahojky)
+Send me->('127.0.0.1', 9032) (ahojky)
+Send me->('127.0.0.1', 11024) (ahojky)
+Send me->('127.0.0.1', 12000) (ahojky)
+-------------------

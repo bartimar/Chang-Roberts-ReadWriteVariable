@@ -1,0 +1,30 @@
+dport=9009
+adding node 127.0.0.1 11009
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9009
+node appended, connection created
+adding conn 127.0.0.1 9009
+currently have 1 connections
+currently have 2 nodes
+Send me->('127.0.0.1', 9009) (HELLO 127.0.0.1 11009)
+Received new connection
+adding node 127.0.0.1 9009
+currently have 2 nodes
+adding node 127.0.0.1 10009
+node appended, connection created
+adding conn 127.0.0.1 10009
+currently have 2 connections
+adding node 127.0.0.1 11009
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 11009
+currently have 3 nodes
+adding node 127.0.0.1 10009
+currently have 3 nodes
+Sending to left node. My id=1 left=0 (127.0.0.1 10009)
+System has a new leader: id=2
+Sending to left node. My id=1 left=0 (127.0.0.1 10009)
+received BYE from 127.0.0.1 10009
+deleting conn 127.0.0.1 10009
+deleting node 127.0.0.1 10009 id=0

@@ -1,0 +1,7 @@
+dport=9034
+adding node 127.0.0.1 10034
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9034
+node appended, connection created
+adding conn 127.0.0.1 9034

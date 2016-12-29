@@ -1,0 +1,34 @@
+dport=9010
+adding node 127.0.0.1 11010
+node appended, connection created
+currently have 1 nodes
+adding node 127.0.0.1 9010
+node appended, connection created
+adding conn 127.0.0.1 9010
+currently have 1 connections
+currently have 2 nodes
+Send me->('127.0.0.1', 9010) (HELLO 127.0.0.1 11010)
+Received new connection
+adding node 127.0.0.1 9010
+currently have 2 nodes
+adding node 127.0.0.1 10010
+node appended, connection created
+adding conn 127.0.0.1 10010
+currently have 2 connections
+adding node 127.0.0.1 11010
+currently have 3 nodes
+Received new connection
+adding node 127.0.0.1 11010
+currently have 3 nodes
+adding node 127.0.0.1 10010
+currently have 3 nodes
+Sending to left node. My id=1 left=0 (127.0.0.1 10010)
+System has a new leader: id=2
+Sending to left node. My id=1 left=0 (127.0.0.1 10010)
+received BYE from 127.0.0.1 10010
+deleting conn 127.0.0.1 10010
+deleting node 127.0.0.1 10010 id=0
+Sending to left node. My id=0 left=1 (127.0.0.1 9010)
+Sending to left node. My id=0 left=1 (127.0.0.1 9010)
+Changing variable default->11
+wrong command ""!

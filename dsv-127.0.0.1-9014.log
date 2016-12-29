@@ -1,0 +1,35 @@
+dport=-1
+adding node 127.0.0.1 9014
+node appended, connection created
+currently have 1 nodes
+First node started on port 9014
+Received new connection
+adding node 127.0.0.1 10014
+node appended, connection created
+adding conn 127.0.0.1 10014
+currently have 1 connections
+currently have 2 nodes
+adding node 127.0.0.1 10014
+currently have 2 nodes
+Send me->127.0.0.1 10014 (WELCOME 127.0.0.1 10014)
+Send me->('127.0.0.1', 10014) (WELCOME 127.0.0.1 10014)
+Sending to left node. My id=1 left=0 (127.0.0.1 10014)
+I'm the new leader.
+Sending to left node. My id=1 left=0 (127.0.0.1 10014)
+Received new connection
+adding node 127.0.0.1 11014
+node appended, connection created
+adding conn 127.0.0.1 11014
+currently have 2 connections
+currently have 3 nodes
+adding node 127.0.0.1 11014
+currently have 3 nodes
+Send me->127.0.0.1 11014 (WELCOME 127.0.0.1 10014 127.0.0.1 11014)
+Send me->('127.0.0.1', 10014) (WELCOME 127.0.0.1 11014)
+Send me->('127.0.0.1', 11014) (WELCOME 127.0.0.1 11014)
+Sending to left node. My id=2 left=1 (127.0.0.1 11014)
+I'm the new leader.
+Sending to left node. My id=2 left=1 (127.0.0.1 11014)
+received BYE from 127.0.0.1 10014
+deleting conn 127.0.0.1 10014
+127.0.0.1==127.0.0.1 10014==10014

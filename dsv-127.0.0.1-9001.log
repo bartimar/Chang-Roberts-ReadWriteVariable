@@ -1,0 +1,44 @@
+dport=-1
+adding node 127.0.0.1 9001
+node appended, connection created
+currently have 1 nodes
+First node started on port 9001
+Received new connection
+adding node 127.0.0.1 10001
+node appended, connection created
+adding conn 127.0.0.1 10001
+currently have 1 connections
+currently have 2 nodes
+RECV:('127.0.0.1', 9001)> WELCOME 127.0.0.1 10001
+adding node 127.0.0.1 10001
+currently have 2 nodes
+Send me->127.0.0.1 10001 (WELCOME 127.0.0.1 10001)
+Send me->('127.0.0.1', 10001) (WELCOME 127.0.0.1 10001)
+Sending to left node. My id=1 left=0 (127.0.0.1 10001)
+RECV:('127.0.0.1', 9001)> HELLO 127.0.0.1 10001
+I'm the new leader.
+Sending to left node. My id=1 left=0 (127.0.0.1 10001)
+RECV:('127.0.0.1', 9001)> ELECTION 1
+Received new connection
+adding node 127.0.0.1 11001
+node appended, connection created
+adding conn 127.0.0.1 11001
+currently have 2 connections
+currently have 3 nodes
+RECV:('127.0.0.1', 9001)> WELCOME 127.0.0.1 11001
+adding node 127.0.0.1 11001
+currently have 3 nodes
+Send me->127.0.0.1 11001 (WELCOME 127.0.0.1 10001 127.0.0.1 11001)
+Send me->('127.0.0.1', 10001) (WELCOME 127.0.0.1 11001)
+Send me->('127.0.0.1', 11001) (WELCOME 127.0.0.1 11001)
+Sending to left node. My id=2 left=1 (127.0.0.1 11001)
+RECV:('127.0.0.1', 9001)> HELLO 127.0.0.1 11001
+I'm the new leader.
+Sending to left node. My id=2 left=1 (127.0.0.1 11001)
+RECV:('127.0.0.1', 9001)> ELECTION 2
+------------------------------
+127.0.0.1 10001
+127.0.0.1 11001
+127.0.0.1 9001(me) = leader
+total=3
+------------------------------

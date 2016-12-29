@@ -1,0 +1,66 @@
+dport=-1
+adding node 127.0.0.1 9045
+node appended, connection created
+currently have 1 nodes
+First node started on port 9045
+Received new connection
+adding node 127.0.0.1 10045
+node appended, connection created
+adding conn 127.0.0.1 10045
+currently have 1 connections
+currently have 2 nodes
+adding node 127.0.0.1 10045
+currently have 2 nodes
+Send me->127.0.0.1 10045 (WELCOME 127.0.0.1 10045)
+len conn=1
+Send me->('127.0.0.1', 10045) (WELCOME 127.0.0.1 10045)
+Voting initiated by node 1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION0 ==1
+Sending to left node (1->0) ELECTION 1
+really sending that msg
+Received ELECTION1 ==1
+I'm the new leader.
+Sending to left node (1->0) ELECTED 1
+really sending that msg
+Received ELECTION1 ==1
+I'm the new leader.
+Sending to left node (1->0) ELECTED 1
+really sending that msg
+Received ELECTED 1
+Received ELECTED 1
+Received new connection
+adding node 127.0.0.1 11045
+node appended, connection created
+adding conn 127.0.0.1 11045
+currently have 2 connections
+currently have 3 nodes
+adding node 127.0.0.1 11045
+currently have 3 nodes
+Send me->127.0.0.1 11045 (WELCOME 127.0.0.1 10045 127.0.0.1 11045)
+len conn=2
+Send me->('127.0.0.1', 10045) (WELCOME 127.0.0.1 11045)
+Send me->('127.0.0.1', 11045) (WELCOME 127.0.0.1 11045)
+Voting initiated by node 2
+Sending to left node (2->1) ELECTION 2
+really sending that msg
+Received ELECTION1 ==2
+Sending to left node (2->1) ELECTION 2
+really sending that msg
+Received ELECTION2 ==2
+I'm the new leader.
+Sending to left node (2->1) ELECTED 2
+really sending that msg
+Received ELECTION2 ==2
+I'm the new leader.
+Sending to left node (2->1) ELECTED 2
+really sending that msg
+Received ELECTED 2
+Received ELECTED 2
+len conn=2
+Send me->('127.0.0.1', 10045) (BYE 127.0.0.1 9045)
+Send me->('127.0.0.1', 11045) (BYE 127.0.0.1 9045)
+Client: end->True
+closing clientsocket
+Server terminating

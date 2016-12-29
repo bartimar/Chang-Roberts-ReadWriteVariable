@@ -1,0 +1,81 @@
+1: dport=-1
+1: adding node 127.0.0.1 9052
+1: node appended, connection created
+1: currently have 1 nodes
+1: First node started on port 9052
+13: shared variable: default
+19: ------------------------------
+19: 127.0.0.1 9052(me) = leader
+19: total=1
+19: ------------------------------
+26: ------------------------------
+26: 127.0.0.1 9052(me) = leader
+26: total=1
+26: ------------------------------
+27: ------------------------------
+27: 127.0.0.1 9052(me) = leader
+27: total=1
+27: ------------------------------
+28: ------------------------------
+28: 127.0.0.1 9052(me) = leader
+28: total=1
+28: ------------------------------
+29: ------------------------------
+29: 127.0.0.1 9052(me) = leader
+29: total=1
+29: ------------------------------
+40: Received new connection
+40: adding node 127.0.0.1 10052
+40: node appended, connection created
+40: adding conn 127.0.0.1 10052
+40: currently have 1 connections
+40: currently have 2 nodes
+40: adding node 127.0.0.1 10052
+40: currently have 2 nodes
+40: Send me->127.0.0.1 10052 (WELCOME 127.0.0.1 10052)
+40: len conn=1
+40: Send me->('127.0.0.1', 10052) (WELCOME 127.0.0.1 10052)
+41: Voting initiated by node 1
+41: Sending to left node (1->0) ELECTION 1
+41: really sending that msg
+41: Received ELECTION0 ==1
+41: Sending to left node (1->0) ELECTION 1
+41: really sending that msg
+41: Received ELECTION1 ==1
+41: I'm the new leader.
+41: Sending to left node (1->0) ELECTED 1
+41: really sending that msg
+41: Received ELECTION1 ==1
+41: I'm the new leader.
+41: Sending to left node (1->0) ELECTED 1
+41: really sending that msg
+41: Received ELECTED 1
+41: Received ELECTED 1
+54: Received new connection
+54: adding node 127.0.0.1 11052
+54: node appended, connection created
+54: adding conn 127.0.0.1 11052
+54: currently have 2 connections
+54: currently have 3 nodes
+54: adding node 127.0.0.1 11052
+54: currently have 3 nodes
+54: Send me->127.0.0.1 11052 (WELCOME 127.0.0.1 10052 127.0.0.1 11052)
+54: len conn=2
+54: Send me->('127.0.0.1', 10052) (WELCOME 127.0.0.1 11052)
+54: Send me->('127.0.0.1', 11052) (WELCOME 127.0.0.1 11052)
+55: Voting initiated by node 2
+55: Sending to left node (2->1) ELECTION 2
+55: really sending that msg
+55: Received ELECTION1 ==2
+55: Sending to left node (2->1) ELECTION 2
+55: really sending that msg
+55: Received ELECTION2 ==2
+55: I'm the new leader.
+55: Sending to left node (2->1) ELECTED 2
+55: really sending that msg
+55: Received ELECTION2 ==2
+55: I'm the new leader.
+55: Sending to left node (2->1) ELECTED 2
+55: really sending that msg
+55: Received ELECTED 2
+55: Received ELECTED 2
